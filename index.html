@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirhossein Beheshti - Back-End Developer</title>
+    <title>Amirhossein Beheshti - Interactive Timeline CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,47 +21,93 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        h1, h2, h3 {
+        h1, h2 {
             color: #0073e6;
-            margin-bottom: 8px;
-        }
-        .header {
             text-align: center;
-            margin-bottom: 30px;
         }
         .header h1 {
             font-size: 2.5em;
         }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
         }
-        .contact-info a {
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #0073e6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container-timeline {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .container-timeline.left {
+            left: 0;
+        }
+        .container-timeline.right {
+            left: 50%;
+        }
+        .container-timeline::before {
+            content: " ";
+            position: absolute;
+            top: 15px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #0073e6;
+            border: 4px solid #fff;
+            z-index: 1;
+        }
+        .container-timeline.left::before {
+            left: 100%;
+            margin-left: -12px;
+        }
+        .container-timeline.right::before {
+            right: 100%;
+            margin-right: -12px;
+        }
+        .content {
+            padding: 20px;
+            background-color: #e8f1f9;
+            position: relative;
+            border-radius: 6px;
+        }
+        .content h3 {
+            margin-top: 0;
             color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
         }
-        .section {
-            margin-bottom: 30px;
+        .left .content {
+            margin-left: 30px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .right .content {
+            margin-right: 30px;
         }
-        li {
-            margin-bottom: 8px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-        .skills-grid h3 {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            color: #555;
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .container-timeline {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .container-timeline.left, .container-timeline.right {
+                left: 0;
+            }
+            .container-timeline.left::before, .container-timeline.right::before {
+                left: 18px;
+            }
+            .left .content, .right .content {
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -71,87 +117,56 @@
             <h1>Amirhossein Beheshti</h1>
             <p>Software Engineer | Back-End Developer</p>
         </header>
-        <div class="contact-info">
-            <a href="tel:+989133172047">📞 +98 913 317 20 47</a>
-            <a href="mailto:amirbeh71@gmail.com">✉️ amirbeh71@gmail.com</a>
-            <a href="https://www.linkedin.com/in/amirhosein-beheshty/">🔗 LinkedIn</a>
-        </div>
+
         <section class="section">
-            <h2>Summary</h2>
-            <p>Passionate Back-End Developer with over 5 years of experience in building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles and Domain-Driven Design for maintainable code. Committed to optimizing performance, integrating third-party APIs, and collaborating within cross-functional teams.</p>
-        </section>
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div>
-                    <h3>Programming Languages</h3>
-                    <ul><li>C#</li><li>T-SQL</li></ul>
+            <h2>Interactive Timeline</h2>
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="container-timeline left">
+                    <div class="content">
+                        <h3>Fintranet - Back-End Developer</h3>
+                        <p><strong>Jul 2022 – Present</strong></p>
+                        <ul>
+                            <li>Developed a financial product, increasing customer trust by 40% through enhanced compliance.</li>
+                            <li>Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.</li>
+                            <li>Boosted database performance by 20% through optimized SQL queries.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>Frameworks</h3>
-                    <ul><li>ASP.NET</li><li>.NET Core</li><li>EF Core</li><li>ABP</li></ul>
+                <!-- Experience 2 -->
+                <div class="container-timeline right">
+                    <div class="content">
+                        <h3>Nik Group - Back-End Developer</h3>
+                        <p><strong>May 2020 – Jun 2022</strong></p>
+                        <ul>
+                            <li>Developed microservices and integrated them with external security systems.</li>
+                            <li>Created a project management system for a manufacturing client, increasing efficiency by 30%.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>Design & Architecture</h3>
-                    <ul><li>Microservices</li><li>DDD</li><li>Design Patterns</li><li>SOLID</li></ul>
+                <!-- Experience 3 -->
+                <div class="container-timeline left">
+                    <div class="content">
+                        <h3>Acctech - Back-End Developer</h3>
+                        <p><strong>Mar 2019 – Apr 2020</strong></p>
+                        <ul>
+                            <li>Developed a modular solution in C# and .NET Core, enhancing scalability and maintainability.</li>
+                            <li>Improved third-party integrations, resulting in a 50% improvement in data handling efficiency.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h3>DevOps & Cloud</h3>
-                    <ul><li>Azure DevOps</li><li>Azure Service Bus</li><li>Azure Blob Storage</li><li>Application Insights</li></ul>
-                </div>
-                <div>
-                    <h3>Databases</h3>
-                    <ul><li>MSSQL Server</li><li>Redis</li></ul>
-                </div>
-                <div>
-                    <h3>Testing & Documentation</h3>
-                    <ul><li>Unit & Integration Tests</li><li>Documentation</li></ul>
-                </div>
-                <div>
-                    <h3>Version Control & Collaboration</h3>
-                    <ul><li>Git</li><li>Agile/Scrum methodologies</li></ul>
+                <!-- Experience 4 -->
+                <div class="container-timeline right">
+                    <div class="content">
+                        <h3>Danayan Co - Software Developer</h3>
+                        <p><strong>Mar 2018 – Jan 2019</strong></p>
+                        <ul>
+                            <li>Enhanced accounting software functionalities using C#, Windows Forms, and T-SQL.</li>
+                            <li>Optimized system performance, improving user experience by 15%.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="section">
-            <h2>Experience</h2>
-            <h3>Fintranet - Back-End Developer</h3>
-            <p><i>Jul 2022 – Present</i></p>
-            <ul>
-                <li>Developed a financial product, increasing customer trust by 40% through enhanced compliance.</li>
-                <li>Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.</li>
-                <li>Boosted database performance by 20% through optimized SQL queries.</li>
-                <li>Enhanced service reliability by 40% by coordinating with cross-functional teams.</li>
-            </ul>
-            <h3>Nik Group - Back-End Developer</h3>
-            <p><i>May 2020 – Jun 2022</i></p>
-            <ul>
-                <li>Developed microservices and integrated them with external security systems.</li>
-                <li>Created a project management system for a manufacturing client, increasing efficiency by 30%.</li>
-                <li>Contributed to architecture design for scalable web applications.</li>
-            </ul>
-            <h3>Acctech - Back-End Developer</h3>
-            <p><i>Mar 2019 – Apr 2020</i></p>
-            <ul>
-                <li>Developed a modular solution in C# and .NET Core, enhancing scalability and maintainability.</li>
-                <li>Improved third-party integrations, resulting in a 50% improvement in data handling efficiency.</li>
-                <li>Collaborated on architecture design to ensure scalability.</li>
-            </ul>
-            <h3>Danayan Co - Software Developer</h3>
-            <p><i>Mar 2018 – Jan 2019</i></p>
-            <ul>
-                <li>Enhanced accounting software functionalities using C#, Windows Forms, and T-SQL.</li>
-                <li>Accelerated feature delivery by 20% through efficient product enhancement design.</li>
-                <li>Optimized system performance, improving user experience by 15%.</li>
-            </ul>
-        </section>
-        <section class="section">
-            <h2>Education</h2>
-            <p>Azad University, Iran – B.Sc. Information Technology</p>
-        </section>
-        <section class="section">
-            <h2>Languages</h2>
-            <ul><li>English: Professional working proficiency</li><li>Persian: Native</li></ul>
         </section>
     </div>
 </body>
