@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="256" cy="256" r="240" fill="#2c3e50"/>
+    
+    <!-- Tech Circuit Lines -->
+    <path d="M156 256h200M256 156v200" stroke="#3498db" stroke-width="24" stroke-linecap="round"/>
+    
+    <!-- AB Monogram -->
+    <text x="256" y="300" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#ecf0f1" text-anchor="middle">AB</text>
+    
+    <!-- Decorative Elements -->
+    <circle cx="156" cy="256" r="12" fill="#e74c3c"/>
+    <circle cx="356" cy="256" r="12" fill="#e74c3c"/>
+    <circle cx="256" cy="156" r="12" fill="#e74c3c"/>
+    <circle cx="256" cy="356" r="12" fill="#e74c3c"/>
+</svg> 
