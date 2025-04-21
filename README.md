@@ -8,7 +8,8 @@
 
 ## 🧠 Summary
 
-Results-driven Back-End Developer with 6+ years of experience building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles, Domain-Driven Design, and microservices to craft maintainable, high-performance systems. Proven ability to optimize backend performance, integrate third-party APIs, and collaborate across teams to drive delivery and efficiency.
+Back-End Developer with 6+ years of experience building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles, Domain-Driven Design, and microservices to develop maintainable, high-performancesystems. Experienced in optimizing backend performance, integrating third-party APIs, and collaborating with cross-functional teams to ship reliable software.
+
 
 ---
 
@@ -28,37 +29,40 @@ Results-driven Back-End Developer with 6+ years of experience building scalable 
 
 ### **Fintranet – Back-End Developer**  
 *Jul 2022 – Present*  
-- Developed a compliance-focused financial product with audit logging and access controls, supporting regulatory requirements and increasing client adoption.  
+- Developed a compliance-focused financial product used by 1,500+ clients, supporting audit trails and role-based access control.  
 - Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.  
-- Improved SQL performance through indexing and query optimization, achieving a 20% boost in database speed.  
-- Built a unified messaging abstraction over Azure Service Bus, allowing seamless use of Request, Session, and basic messaging patterns without exposing infrastructure complexity.  
-- Introduced interceptor-based automatic Unit of Work management, eliminating manual transaction control.  
-- Set up authentication with Azure AD B2C, supporting multi-tenant user access and centralized identity management.  
-- Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing reliability.  
+- Optimized SQL performance via indexing and query tuning, resulting in a 20% improvement in database speed.  
+- Developed a messaging abstraction over Azure Service Bus to support Request, Session, and basic messaging patterns without exposing infrastructure details to developers.
+- Implemented automatic Unit of Work handling via interceptors, eliminating 90% of manual transaction boilerplate and reducing development overhead.  
+- Set up authentication using Azure AD B2C, enabling multi-tenant user access and centralized identity management.
+- Mentored junior developers by conducting code reviews and sharing best practices in C# and Azure, resulting in a 25% reduction in code-related issues during production deployments.
+- Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing reliability.
+- Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing overall system reliability.
 
 ---
 
 ### **Nik Group – Back-End Developer**  
 *May 2020 – Jun 2022*  
-- Built a microservice in .NET Core to integrate with security devices across 3,000+ jewelry stores.  
-- Implemented real-time monitoring and failure alerting to ensure proactive issue detection.  
-- Developed a Redis-based caching layer, reducing DB query load by 30% and response time from 500ms to 200ms.  
-- Contributed to architectural planning and requirements analysis for scalable, performance-oriented solutions.  
+- Built a microservice in .NET Core to collect health data from 3,000+ security devices deployed in jewelry stores.  
+- Implemented real-time monitoring and failure alerts to detect issues early and enhance operational safety.  
+- Added a Redis caching layer to reduce database load by 30% and cut average response times from 500ms to 200ms  
+- Contributed to architectural planning and requirements analysis for scalable, performance-oriented solutions.
+- Participated in architecture and requirements planning to support scalable, high-performance system design
 
 ---
 
 ### **Acctech – Back-End Developer**  
 *Mar 2019 – Apr 2020*  
-- Built a modular Web API platform from scratch, reducing feature development time by 30% through reusable service components.  
-- Developed integrations with external APIs for automated data ingestion, cutting parsing time in half.  
-- Collaborated with architects to align system design with functional and performance goals.  
+- Introduced a modular Web API platform from scratch, reducing feature development time by 30% through reusable service components.
+- Built resilient API integrations for automated data ingestion, halving parsing time and streamlining data workflows.  
+- Worked closely with solution architects to design scalable web applications, aligning system architecture with functional and performance goals.  
 
 ---
 
 ### **Danayan Co – Software Developer**  
 *Mar 2018 – Jan 2019*  
-- Built and extended accounting software modules using C# (Windows Forms), EF, and T-SQL.  
-- Refactored legacy code and tuned performance across modules, improving system responsiveness by 15%.  
+- Enhanced and extended accounting software modules using C# (Windows Forms), EF, and T-SQL.
+-  Refactored legacy code and optimized database interactions, improving system responsiveness and enhancing user experience by 15%.  
 
 ---
 
