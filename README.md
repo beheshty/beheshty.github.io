@@ -36,7 +36,6 @@ Back-End Developer with 6+ years of experience building scalable web application
 - Implemented automatic Unit of Work handling via interceptors, eliminating 90% of manual transaction boilerplate and reducing development overhead.  
 - Set up authentication using Azure AD B2C, enabling multi-tenant user access and centralized identity management.
 - Mentored junior developers by conducting code reviews and sharing best practices in C# and Azure, resulting in a 25% reduction in code-related issues during production deployments.
-- Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing reliability.
 - Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing overall system reliability.
 
 ---
