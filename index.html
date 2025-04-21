@@ -3,255 +3,615 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirhossein Beheshti - Interactive CV</title>
+    <title>Amirhossein Beheshti - Back-End Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #2c3e50;
+            --light-bg: #f8f9fa;
+            --dark-bg: #2c3e50;
+            --card-bg: #ffffff;
+            --border-color: #e1e4e8;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #ecf0f1;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #ecf0f1;
+            --light-bg: #2c3e50;
+            --dark-bg: #1a252f;
+            --card-bg: #34495e;
+            --border-color: #2c3e50;
+        }
+
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
-        h1, h2, h3 {
-            color: #0073e6;
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--card-bg);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
-        h3 {
-            margin-top: 0;
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
         }
+
+        /* Header Styles */
         .header {
+            background: var(--dark-bg);
+            color: white;
+            padding: 4rem 0;
             text-align: center;
-            margin-bottom: 30px;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        .contact-info a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .skills-category {
-            background-color: #f0f8ff;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        }
-        .skills-category h3 {
-            font-size: 1.1em;
-            color: #0073e6;
-            margin-bottom: 10px;
-        }
-        .timeline {
             position: relative;
-            max-width: 800px;
-            margin: 20px auto;
+            overflow: hidden;
         }
-        .timeline::after {
+
+        .header::before {
             content: '';
             position: absolute;
-            width: 4px;
-            background-color: #0073e6;
             top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-        .container-timeline {
-            padding: 20px;
-            position: relative;
-            background-color: inherit;
-            width: 45%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            background-color: #e8f1f9;
-            margin-bottom: 20px;
-        }
-        .container-timeline.left {
             left: 0;
-        }
-        .container-timeline.right {
-            left: 50%;
-        }
-        .container-timeline::before {
-            content: " ";
-            position: absolute;
-            top: 20px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #0073e6;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(52, 152, 219, 0.3), rgba(231, 76, 60, 0.3));
             z-index: 1;
         }
-        .container-timeline.left::before {
-            right: -10px;
+
+        .header-content {
+            position: relative;
+            z-index: 2;
         }
-        .container-timeline.right::before {
-            left: -10px;
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
         }
-        @media screen and (max-width: 600px) {
-            .timeline::after {
-                left: 31px;
+
+        .header p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-links a:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Section Styles */
+        .section {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
             }
-            .container-timeline {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
+
+            .section {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
             }
-            .container-timeline.left, .container-timeline.right {
-                left: 0;
+
+            .theme-toggle {
+                display: none;
             }
-            .container-timeline.left::before, .container-timeline.right::before {
-                left: 18px;
+
+            .contact-links a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .header {
+                background: white;
+                color: black;
+            }
+
+            .header::before {
+                display: none;
+            }
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category li::before {
+            content: '•';
+            color: var(--accent-color);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--secondary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-content {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .timeline-content .date {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-content li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+
+            .timeline-item::before {
+                left: 14px;
+            }
+
+            .timeline-content:hover {
+                transform: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header class="header">
+        <div class="header-content">
             <h1>Amirhossein Beheshti</h1>
-            <p>Software Engineer | Back-End Developer</p>
-        </header>
-        <div class="contact-info">
-            <a href="tel:+989133172047">📞 +98 913 317 20 47</a>
-            <a href="mailto:amirbeh71@gmail.com">✉️ amirbeh71@gmail.com</a>
-            <a href="https://www.linkedin.com/in/amirhosein-beheshty/">🔗 LinkedIn</a>
+            <p>Back-End Developer</p>
+            <div class="contact-links">
+                <a href="tel:+989133172047"><i class="fas fa-phone"></i> +98 913 317 20 47</a>
+                <a href="mailto:amirbeh71@gmail.com"><i class="fas fa-envelope"></i> amirbeh71@gmail.com</a>
+                <a href="https://www.linkedin.com/in/amirhosein-beheshty/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
         </div>
-        
-        <!-- Summary Section -->
+    </header>
+
+    <div class="container">
         <section class="section">
             <h2>Summary</h2>
-            <p>Passionate Back-End Developer with over 5 years of experience in building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles and Domain-Driven Design for maintainable code. Committed to optimizing performance, integrating third-party APIs, and collaborating within cross-functional teams.</p>
+            <p>Back-End Developer with 6+ years of experience building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles, Domain-Driven Design, and microservices to develop maintainable, high-performance systems. Experienced in optimizing backend performance, integrating third-party APIs, and collaborating with cross-functional teams to ship reliable software.</p>
         </section>
-        
-        <!-- Skills Section -->
+
         <section class="section">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Programming Languages</h3>
-                    <ul><li>C#</li><li>T-SQL</li></ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>T-SQL</li>
+                    </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>Frameworks</h3>
-                    <ul><li>ASP.NET</li><li>.NET Core</li><li>EF Core</li><li>ABP</li></ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                    <ul>
+                        <li>ASP.NET</li>
+                        <li>.NET Core</li>
+                        <li>EF Core</li>
+                        <li>ABP</li>
+                    </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>Design & Architecture</h3>
-                    <ul><li>Microservices</li><li>DDD</li><li>Design Patterns</li><li>SOLID</li></ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-sitemap"></i> Design & Architecture</h3>
+                    <ul>
+                        <li>Microservices</li>
+                        <li>DDD</li>
+                        <li>Design Patterns</li>
+                        <li>SOLID</li>
+                    </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>DevOps & Cloud</h3>
-                    <ul><li>Azure DevOps</li><li>Azure Service Bus</li><li>Azure Blob Storage</li><li>Application Insights</li></ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+                    <ul>
+                        <li>Azure DevOps</li>
+                        <li>Azure Service Bus</li>
+                        <li>Azure Blob Storage</li>
+                        <li>Application Insights</li>
+                    </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>Databases</h3>
-                    <ul><li>MSSQL Server</li><li>Redis</li></ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <ul>
+                        <li>MS SQL Server</li>
+                        <li>Redis</li>
+                    </ul>
                 </div>
-                <div class="skills-category">
-                    <h3>Testing & Documentation</h3>
-                    <ul><li>Unit & Integration Tests</li><li>Documentation</li></ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Version Control & Collaboration</h3>
-                    <ul><li>Git</li><li>Agile/Scrum methodologies</li></ul>
+                <div class="skill-category">
+                    <h3><i class="fas fa-vial"></i> Testing & Documentation</h3>
+                    <ul>
+                        <li>Unit Testing</li>
+                        <li>Integration Testing</li>
+                        <li>Technical Documentation</li>
+                    </ul>
                 </div>
             </div>
         </section>
-        
-        <!-- Experience Timeline Section -->
+
         <section class="section">
             <h2>Experience</h2>
             <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="container-timeline left">
-                    <div class="content">
-                        <h3>Fintranet - Back-End Developer</h3>
-                        <p><strong>Jul 2022 – Present</strong></p>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fintranet – Back-End Developer</h3>
+                        <div class="date">Jul 2022 – Present</div>
                         <ul>
-                            <li>Developed a financial product, increasing customer trust by 40% through enhanced compliance.</li>
+                            <li>Developed a compliance-focused financial product used by 1,500+ clients, supporting audit trails and role-based access control.</li>
                             <li>Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.</li>
-                            <li>Boosted database performance by 20% through optimized SQL queries.</li>
+                            <li>Optimized SQL performance via indexing and query tuning, resulting in a 20% improvement in database speed.</li>
+                            <li>Developed a messaging abstraction over Azure Service Bus to support Request, Session, and basic messaging patterns without exposing infrastructure details to developers.</li>
+                            <li>Implemented automatic Unit of Work handling via interceptors, eliminating 90% of manual transaction boilerplate and reducing development overhead.</li>
+                            <li>Set up authentication using Azure AD B2C, enabling multi-tenant user access and centralized identity management.</li>
+                            <li>Mentored junior developers by conducting code reviews and sharing best practices in C# and Azure, resulting in a 25% reduction in code-related issues during production deployments.</li>
+                            <li>Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing overall system reliability.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Experience 2 -->
-                <div class="container-timeline right">
-                    <div class="content">
-                        <h3>Nik Group - Back-End Developer</h3>
-                        <p><strong>May 2020 – Jun 2022</strong></p>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Nik Group – Back-End Developer</h3>
+                        <div class="date">May 2020 – Jun 2022</div>
                         <ul>
-                            <li>Developed microservices and integrated them with external security systems.</li>
-                            <li>Created a project management system for a manufacturing client, increasing efficiency by 30%.</li>
+                            <li>Built a microservice in .NET Core to collect health data from 3,000+ security devices deployed in jewelry stores.</li>
+                            <li>Implemented real-time monitoring and failure alerts to detect issues early and enhance operational safety.</li>
+                            <li>Added a Redis caching layer to reduce database load by 30% and cut average response times from 500ms to 200ms.</li>
+                            <li>Contributed to architectural planning and requirements analysis for scalable, performance-oriented solutions.</li>
+                            <li>Participated in architecture and requirements planning to support scalable, high-performance system design.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Experience 3 -->
-                <div class="container-timeline left">
-                    <div class="content">
-                        <h3>Acctech - Back-End Developer</h3>
-                        <p><strong>Mar 2019 – Apr 2020</strong></p>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Acctech – Back-End Developer</h3>
+                        <div class="date">Mar 2019 – Apr 2020</div>
                         <ul>
-                            <li>Developed a modular solution in C# and .NET Core, enhancing scalability and maintainability.</li>
-                            <li>Improved third-party integrations, resulting in a 50% improvement in data handling efficiency.</li>
+                            <li>Introduced a modular Web API platform from scratch, reducing feature development time by 30% through reusable service components.</li>
+                            <li>Built resilient API integrations for automated data ingestion, halving parsing time and streamlining data workflows.</li>
+                            <li>Worked closely with solution architects to design scalable web applications, aligning system architecture with functional and performance goals.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Experience 4 -->
-                <div class="container-timeline right">
-                    <div class="content">
-                        <h3>Danayan Co - Software Developer</h3>
-                        <p><strong>Mar 2018 – Jan 2019</strong></p>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Danayan Co – Software Developer</h3>
+                        <div class="date">Mar 2018 – Jan 2019</div>
                         <ul>
-                            <li>Enhanced accounting software functionalities using C#, Windows Forms, and T-SQL.</li>
-                            <li>Optimized system performance, improving user experience by 15%.</li>
+                            <li>Enhanced and extended accounting software modules using C# (Windows Forms), EF, and T-SQL.</li>
+                            <li>Refactored legacy code and optimized database interactions, improving system responsiveness and enhancing user experience by 15%.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
         <section class="section">
             <h2>Education</h2>
-            <p>Azad University, Iran – B.Sc. Information Technology</p>
+            <p><strong>Azad University, Iran</strong><br>
+            B.Sc. Information Technology</p>
         </section>
 
-        <!-- Languages Section -->
         <section class="section">
             <h2>Languages</h2>
             <ul>
-                <li>English: Professional working proficiency</li>
-                <li>Persian: Native</li>
+                <li><strong>English:</strong> Professional working proficiency</li>
+                <li><strong>Persian:</strong> Native</li>
             </ul>
         </section>
+
+        <!-- New Projects Section -->
+        <section class="section">
+            <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Financial Compliance System</h3>
+                    <p>Developed a comprehensive financial compliance system supporting 1,500+ clients with audit trails and role-based access control.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET Core</span>
+                        <span class="tech-tag">Azure AD B2C</span>
+                        <span class="tech-tag">Azure Service Bus</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Security Device Monitoring System</h3>
+                    <p>Built a microservice architecture for real-time monitoring of 3,000+ security devices with failure alerts and performance optimization.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">.NET Core</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Real-time Monitoring</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Modular Web API Platform</h3>
+                    <p>Created a scalable Web API platform with reusable components, reducing development time by 30%.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ASP.NET</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">DDD</span>
+                        <span class="tech-tag">SOLID</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const theme = body.getAttribute('data-theme');
+            const themeToggle = document.querySelector('.theme-toggle i');
+            
+            if (theme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.classList.remove('fa-sun');
+                themeToggle.classList.add('fa-moon');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.classList.remove('fa-moon');
+                themeToggle.classList.add('fa-sun');
+            }
+        }
+
+        // Add intersection observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
