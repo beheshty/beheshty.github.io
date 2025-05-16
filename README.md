@@ -8,20 +8,20 @@
 
 ## 🧠 Summary
 
-Back-End Developer with 6+ years of experience building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles, Domain-Driven Design, and microservices to develop maintainable, high-performancesystems. Experienced in optimizing backend performance, integrating third-party APIs, and collaborating with cross-functional teams to ship reliable software.
-
+Back-End Developer with 7+ years of experience building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles, Domain-Driven Design, and microservices to develop maintainable, high-performance systems. Experienced in optimizing backend performance, integrating third-party APIs, and collaborating with cross-functional teams to ship reliable software.
 
 ---
 
 ## 🛠 Skills
 
 **Programming Languages:** C#, T-SQL  
-**Frameworks:** ASP.NET, .NET Core, EF Core, ABP  
-**Design & Architecture:** Microservices, DDD, Design Patterns, SOLID  
-**DevOps & Cloud:** Azure DevOps, Azure Service Bus, Azure Blob Storage, Application Insights  
+**Frameworks:** ASP.NET, .NET Core, EF Core, gRPC, ABP  
+**Design & Architecture:** Microservices, DDD, CQRS, Design Patterns, SOLID  
+**DevOps & Cloud:** Docker, Azure DevOps, Azure Service Bus, Azure Blob Storage, Application Insights  
 **Databases:** MS SQL Server, Redis  
-**Testing & Documentation:** Unit Testing, Integration Testing, Technical Documentation  
+**Testing & Documentation:** TDD, BDD, Unit Testing, Technical Documentation  
 **Version Control & Collaboration:** Git, Agile (Scrum), CI/CD  
+**Tools:** Visual Studio, Cursor (AI IDE), GitHub Copilot
 
 ---
 
@@ -44,35 +44,28 @@ Back-End Developer with 6+ years of experience building scalable web application
 *May 2020 – Jun 2022*  
 - Built a microservice in .NET Core to collect health data from 3,000+ security devices deployed in jewelry stores.  
 - Implemented real-time monitoring and failure alerts to detect issues early and enhance operational safety.  
-- Added a Redis caching layer to reduce database load by 30% and cut average response times from 500ms to 200ms  
-- Contributed to architectural planning and requirements analysis for scalable, performance-oriented solutions.
-- Participated in architecture and requirements planning to support scalable, high-performance system design
+- Added a Redis caching layer to reduce database load by 30% and cut average response times from 500ms to 200ms.  
+- Participated in architecture and requirements planning to support scalable, high-performance system design.
 
 ---
 
 ### **Acctech – Back-End Developer**  
-*Mar 2019 – Apr 2020*  
+*Feb 2018 – Apr 2020*  
 - Introduced a modular Web API platform from scratch, reducing feature development time by 30% through reusable service components.
 - Built resilient API integrations for automated data ingestion, halving parsing time and streamlining data workflows.  
 - Worked closely with solution architects to design scalable web applications, aligning system architecture with functional and performance goals.  
-
----
-
-### **Danayan Co – Software Developer**  
-*Mar 2018 – Jan 2019*  
-- Enhanced and extended accounting software modules using C# (Windows Forms), EF, and T-SQL.
--  Refactored legacy code and optimized database interactions, improving system responsiveness and enhancing user experience by 15%.  
+- Refactored legacy code and optimized database interactions, improving system responsiveness and enhancing user experience by 15%.
 
 ---
 
 ## 🎓 Education
 
-**Azad University, Iran**  
+**Azad University, Esfahan**  
 *B.Sc. Information Technology*
 
 ---
 
 ## 🌍 Languages
 
-- **English:** Professional working proficiency  
+- **English:** Fluent  
 - **Persian:** Native
