@@ -8,7 +8,7 @@
 
 ## 🧠 Summary
 
-Back-End Developer with 7+ years of experience building scalable web applications using C#, ASP.NET, and .NET Core. Skilled in applying SOLID principles, Domain-Driven Design, and microservices to develop maintainable, high-performance systems. Experienced in optimizing backend performance, integrating third-party APIs, and collaborating with cross-functional teams to ship reliable software.
+As a seasoned Back-End Developer with over seven years of dedicated experience, I've had the pleasure of crafting robust and scalable web applications using C#, ASP.NET, and .NET Core. I'm a firm believer in building software that lasts, which is why I'm passionate about applying SOLID principles and Domain-Driven Design. I also enjoy architecting and developing microservices to create systems that are not only high-performing but also a breeze to maintain. My experience extends to fine-tuning backend performance for optimal speed and seamlessly integrating various third-party APIs. I truly thrive in collaborative environments, working closely with cross-functional teams to successfully deliver reliable and impactful software solutions.
 
 ---
 
