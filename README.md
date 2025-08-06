@@ -2,7 +2,7 @@
 
 **Back-End Developer**  
 📞 +98 913 317 20 47 | ✉️ amirbeh71@gmail.com  
-🔗 [LinkedIn](#) <!-- Replace with actual LinkedIn URL -->
+🔗 [LinkedIn](https://www.linkedin.com/in/amirhosein-beheshty/) | 🔗 [GitHub](https://github.com/beheshty)
 
 ---
 
