@@ -1,40 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amirhossein Beheshti - Back-End Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Favicon -->
+    <title>Amirhossein Beheshti | Senior Back-End Engineer</title>
+    <meta name="description" content="Senior Back-End Engineer with 8+ years of experience engineering high-performance distributed systems using C#, ASP.NET Core, and Azure. Author of SetSharp NuGet package.">
+    <meta name="keywords" content="Amirhossein Beheshti, Back-End Engineer, .NET, C#, ASP.NET Core, Microservices, Domain-Driven Design, Azure, SetSharp, Software Architecture">
+    <meta name="author" content="Amirhossein Beheshti">
+    <link rel="canonical" href="https://beheshty.dev">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beheshty.dev/">
+    <meta property="og:title" content="Amirhossein Beheshti | Senior Back-End Engineer">
+    <meta property="og:description" content="8+ years engineering distributed web systems with C#, ASP.NET Core, and Azure. Creator of SetSharp.">
+    <meta property="og:image" content="https://beheshty.dev/favicon.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://beheshty.dev/">
+    <meta property="twitter:title" content="Amirhossein Beheshti | Senior Back-End Engineer">
+    <meta property="twitter:description" content="8+ years engineering distributed web systems with C#, ASP.NET Core, and Azure. Creator of SetSharp.">
+    <meta property="twitter:image" content="https://beheshty.dev/favicon.svg">
+
+    <!-- Icons & Manifest -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#2c3e50">
-    <meta name="msapplication-TileColor" content="#2c3e50">
-    <meta name="theme-color" content="#2c3e50">
+    <meta name="theme-color" content="#090d16">
+
+    <!-- FontAwesome & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Anti-FOUC Theme Script -->
+    <script>
+        (function() {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'light' || saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #2c3e50;
-            --light-bg: #f8f9fa;
-            --dark-bg: #2c3e50;
-            --card-bg: #ffffff;
-            --border-color: #e1e4e8;
+            --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            /* Light Theme Tokens */
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --border-color: rgba(15, 23, 42, 0.08);
+            --border-highlight: rgba(79, 70, 229, 0.25);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent-primary: #4f46e5;
+            --accent-secondary: #06b6d4;
+            --accent-emerald: #059669;
+            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            --badge-bg: rgba(79, 70, 229, 0.08);
+            --badge-text: #4338ca;
+            --badge-border: rgba(79, 70, 229, 0.2);
+            --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+            --card-shadow-hover: 0 20px 35px -10px rgba(79, 70, 229, 0.12), 0 0 1px 1px rgba(79, 70, 229, 0.25);
+            --timeline-dot-border: #ffffff;
+            --code-bg: #1e293b;
+            --code-color: #e2e8f0;
+            color-scheme: light;
         }
 
         [data-theme="dark"] {
-            --primary-color: #ecf0f1;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #ecf0f1;
-            --light-bg: #2c3e50;
-            --dark-bg: #1a252f;
-            --card-bg: #34495e;
-            --border-color: #2c3e50;
+            /* Dark Theme Tokens */
+            --bg-primary: #090d16;
+            --bg-secondary: #0f172a;
+            --bg-tertiary: #1e293b;
+            --bg-glass: rgba(15, 23, 42, 0.82);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(129, 140, 248, 0.35);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-primary: #818cf8;
+            --accent-secondary: #38bdf8;
+            --accent-emerald: #10b981;
+            --accent-gradient: linear-gradient(135deg, #818cf8 0%, #38bdf8 100%);
+            --badge-bg: rgba(129, 140, 248, 0.12);
+            --badge-text: #c7d2fe;
+            --badge-border: rgba(129, 140, 248, 0.25);
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --card-shadow-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(129, 140, 248, 0.35);
+            --timeline-dot-border: #090d16;
+            --code-bg: #0b0f19;
+            --code-color: #f1f5f9;
+            color-scheme: dark;
         }
 
         * {
@@ -43,594 +110,1451 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
             transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ambient Background Mesh */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle 800px at 50% -100px, rgba(99, 102, 241, 0.12), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 1.5rem;
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: var(--card-bg);
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        /* Header Styles */
-        .header {
-            background: var(--dark-bg);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
+        /* Sticky Frosted Navbar */
+        .navbar {
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(52, 152, 219, 0.3), rgba(231, 76, 60, 0.3));
-            z-index: 1;
+            width: 100%;
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: border-color 0.3s ease;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s ease;
-        }
-
-        .header p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        .contact-links {
+        .nav-container {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            height: 4.25rem;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
 
-        .contact-links a {
-            color: white;
+        .nav-brand {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.1);
+            letter-spacing: -0.02em;
         }
 
-        .contact-links a:hover {
-            transform: translateY(-3px);
-            background: rgba(255, 255, 255, 0.2);
+        .nav-brand span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Section Styles */
-        .section {
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-        }
-
-        .section h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--secondary-color);
+        .nav-menu {
             display: flex;
             align-items: center;
+            gap: 1.75rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.925rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
         }
 
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
         }
 
-        .project-card {
-            background: var(--light-bg);
-            border-radius: 10px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.45);
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
         }
 
-        .project-card h3 {
-            color: var(--secondary-color);
+        .btn-secondary:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--border-highlight);
+            transform: translateY(-2px);
+        }
+
+        .theme-toggle-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: rotate(15deg);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0 3.5rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.375rem 1rem;
+            border-radius: 9999px;
+            background: var(--badge-bg);
+            border: 1px solid var(--badge-border);
+            color: var(--badge-text);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-emerald);
+            box-shadow: 0 0 8px var(--accent-emerald);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .hero h1 {
+            font-size: 3.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
             margin-bottom: 1rem;
         }
 
-        .project-tech {
+        .hero-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            max-width: 780px;
+            margin: 0 auto 2.25rem;
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .hero-actions {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
+            margin-bottom: 2.5rem;
         }
 
-        .tech-tag {
-            background: var(--secondary-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
+        .tech-pill-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.625rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.35rem 0.875rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            font-size: 0.825rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .tech-pill:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Metric Highlights Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin: 3.5rem 0 2rem;
+        }
+
+        .metric-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            transition: all 0.25s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+            border-color: var(--border-highlight);
+        }
+
+        .metric-value {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
             font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
         }
 
-        /* Print Styles */
-        @media print {
-            body {
-                background: white;
-                color: black;
-            }
+        /* Sections Common */
+        .section {
+            padding: 4.5rem 0;
+            border-top: 1px solid var(--border-color);
+        }
 
-            .section {
-                break-inside: avoid;
-                box-shadow: none;
-                border: 1px solid #ddd;
-            }
+        .section-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
 
-            .theme-toggle {
-                display: none;
-            }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.825rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
 
-            .contact-links a {
-                color: black;
-                text-decoration: none;
-            }
-
-            .header {
-                background: white;
-                color: black;
-            }
-
-            .header::before {
-                display: none;
-            }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
         }
 
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
         }
 
-        .skill-category {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+        .skill-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            box-shadow: var(--card-shadow);
+            transition: all 0.25s ease;
         }
 
-        .skill-category:hover {
-            transform: translateY(-5px);
+        .skill-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-highlight);
+            box-shadow: var(--card-shadow-hover);
         }
 
-        .skill-category h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category li {
-            margin-bottom: 0.5rem;
+        .skill-card-header {
             display: flex;
             align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .skill-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.625rem;
+            background: var(--badge-bg);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+        }
+
+        .skill-card-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
         }
 
-        .skill-category li::before {
-            content: '•';
-            color: var(--accent-color);
+        .skill-tag {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--badge-bg);
+            color: var(--accent-primary);
+            border-color: var(--border-highlight);
         }
 
         /* Experience Timeline */
         .timeline {
             position: relative;
-            padding: 2rem 0;
+            max-width: 860px;
+            margin: 0 auto;
+            padding-left: 2rem;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
             left: 0;
-            top: 0;
-            height: 100%;
+            top: 10px;
+            bottom: 10px;
             width: 2px;
-            background: var(--secondary-color);
+            background: linear-gradient(180deg, var(--accent-primary) 0%, rgba(99, 102, 241, 0.1) 100%);
         }
 
         .timeline-item {
             position: relative;
-            padding-left: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
-        .timeline-item::before {
-            content: '';
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
             position: absolute;
-            left: -6px;
-            top: 0;
+            left: -2.4rem;
+            top: 0.25rem;
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background: var(--secondary-color);
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px var(--secondary-color);
+            background: var(--accent-primary);
+            border: 3px solid var(--timeline-dot-border);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.35);
         }
 
-        .timeline-content {
-            background: var(--light-bg);
+        .timeline-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
             padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            transition: transform 0.3s ease;
+            box-shadow: var(--card-shadow);
+            transition: all 0.25s ease;
         }
 
-        .timeline-content:hover {
-            transform: translateX(10px);
+        .timeline-card:hover {
+            transform: translateX(6px);
+            border-color: var(--border-highlight);
+            box-shadow: var(--card-shadow-hover);
         }
 
-        .timeline-content h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
         }
 
-        .timeline-content .date {
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+        .role-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
         }
 
-        .timeline-content ul {
+        .company-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+
+        .timeline-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            background: var(--bg-tertiary);
+            color: var(--text-muted);
+        }
+
+        .timeline-bullets {
             list-style: none;
             padding: 0;
         }
 
-        .timeline-content li {
-            margin-bottom: 1rem;
+        .timeline-bullets li {
+            position: relative;
             padding-left: 1.5rem;
+            margin-bottom: 0.875rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .timeline-bullets li:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-bullets li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-highlight);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .project-badge-top {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-emerald);
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+        }
+
+        .code-snippet {
+            background: var(--code-bg);
+            color: var(--code-color);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            line-height: 1.5;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: gap 0.2s ease;
+        }
+
+        .project-link:hover {
+            gap: 0.6rem;
+            text-decoration: underline;
+        }
+
+        /* Articles / Writing Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .article-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            box-shadow: var(--card-shadow);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-highlight);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .article-meta {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.45;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .article-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Recommendations Carousel/Cards */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
             position: relative;
         }
 
-        .timeline-content li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            opacity: 0.2;
+            margin-bottom: 0.75rem;
         }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .testimonial-text {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 20px;
+        .author-avatar {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            background: var(--badge-bg);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .author-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer & Contact */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 4.5rem 0 2.5rem;
+            text-align: center;
+        }
+
+        .contact-cta {
+            max-width: 650px;
+            margin: 0 auto 3rem;
+        }
+
+        .contact-cta h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .copy-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.625rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-link {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-primary);
+            color: #ffffff;
+            border-color: var(--accent-primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Toast feedback */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--accent-primary);
+            color: #ffffff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(1rem);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 2000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 860px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 4.25rem;
+                left: 0;
+                width: 100%;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--border-color);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1.25rem;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             }
 
-            .timeline-item {
-                padding-left: 50px;
+            .nav-menu.active {
+                display: flex;
             }
 
-            .timeline-item::before {
-                left: 14px;
+            .mobile-menu-btn {
+                display: block;
             }
 
-            .timeline-content:hover {
-                transform: none;
+            .hero h1 {
+                font-size: 2.35rem;
+            }
+
+            .hero-title {
+                font-size: 1.25rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-dot {
+                left: -1.9rem;
+            }
+
+            .section {
+                padding: 3.5rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
-        <i class="fas fa-moon"></i>
-    </button>
 
-    <header class="header">
-        <div class="header-content">
-            <h1>Amirhossein Beheshti</h1>
-            <p>Back-End Developer</p>
-            <div class="contact-links">
-                <a href="tel:+989133172047"><i class="fas fa-phone"></i> +98 913 317 20 47</a>
-                <a href="mailto:amirbeh71@gmail.com"><i class="fas fa-envelope"></i> amirbeh71@gmail.com</a>
-                <a href="https://www.linkedin.com/in/amirhosein-beheshty/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/beheshty"><i class="fab fa-github"></i> GitHub</a>
+    <!-- Sticky Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <span>&lt;AB/&gt;</span> beheshty.dev
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#writing" class="nav-link">Writing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="assets/Amirhossein-Beheshti_Back-End-Engineer.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-file-pdf"></i>
+                    <span>CV</span>
+                </a>
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="container">
-        <section class="section">
-            <h2>Summary</h2>
-            <p>As a seasoned Back-End Developer with over seven years of dedicated experience, I've had the pleasure of crafting robust and scalable web applications using C#, ASP.NET, and .NET Core. I'm a firm believer in building software that lasts, which is why I'm passionate about applying SOLID principles and Domain-Driven Design. I also enjoy architecting and developing microservices to create systems that are not only high-performing but also a breeze to maintain. My experience extends to fine-tuning backend performance for optimal speed and seamlessly integrating various third-party APIs. I truly thrive in collaborative environments, working closely with cross-functional teams to successfully deliver reliable and impactful software solutions.</p>
-        </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="container">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    <span>Open to Remote &amp; Relocation Opportunities</span>
+                </div>
 
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>T-SQL</li>
-                    </ul>
+                <h1>Amirhossein Beheshti</h1>
+                <div class="hero-title">
+                    Senior <span>Back-End Engineer</span> &amp; Distributed Systems Architect
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-                    <ul>
-                        <li>ASP.NET</li>
-                        <li>.NET Core</li>
-                        <li>EF Core</li>
-                        <li>gRPC</li>
-                        <li>ABP</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-sitemap"></i> Design & Architecture</h3>
-                    <ul>
-                        <li>Microservices</li>
-                        <li>DDD</li>
-                        <li>CQRS</li>
-                        <li>Design Patterns</li>
-                        <li>SOLID</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
-                    <ul>
-                        <li>Docker</li>
-                        <li>Azure DevOps</li>
-                        <li>Azure Service Bus</li>
-                        <li>Azure Blob Storage</li>
-                        <li>Application Insights</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
-                    <ul>
-                        <li>MS SQL Server</li>
-                        <li>Redis</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-vial"></i> Testing & Documentation</h3>
-                    <ul>
-                        <li>TDD</li>
-                        <li>BDD</li>
-                        <li>Unit Testing</li>
-                        <li>Technical Documentation</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code-branch"></i> Version Control & Collaboration</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Agile (Scrum)</li>
-                        <li>CI/CD</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <ul>
-                        <li>Visual Studio</li>
-                        <li>Cursor (AI IDE)</li>
-                        <li>GitHub Copilot</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Fintranet – Back-End Developer</h3>
-                        <div class="date">Jul 2022 – Present</div>
-                        <ul>
-                            <li>Developed a compliance-focused financial product used by 1,500+ clients, supporting audit trails and role-based access control.</li>
-                            <li>Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.</li>
-                            <li>Optimized SQL performance via indexing and query tuning, resulting in a 20% improvement in database speed.</li>
-                            <li>Developed a messaging abstraction over Azure Service Bus to support Request, Session, and basic messaging patterns without exposing infrastructure details to developers.</li>
-                            <li>Implemented automatic Unit of Work handling via interceptors, eliminating 90% of manual transaction boilerplate and reducing development overhead.</li>
-                            <li>Set up authentication using Azure AD B2C, enabling multi-tenant user access and centralized identity management.</li>
-                            <li>Mentored junior developers by conducting code reviews and sharing best practices in C# and Azure, resulting in a 25% reduction in code-related issues during production deployments.</li>
-                            <li>Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing overall system reliability.</li>
-                        </ul>
+                <p class="hero-desc">
+                    Back-End Engineer with <strong>8+ years</strong> of experience building high-performance, distributed web systems using <strong>C#, ASP.NET Core, and modern .NET</strong>. Skilled in Domain-Driven Design (DDD), clean architecture, event-driven messaging, and performance optimization across mission-critical financial and healthcare platforms. Creator of the open-source <strong>SetSharp</strong> .NET Source Generator.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="assets/Amirhossein-Beheshti_Back-End-Engineer.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i> Download CV (PDF)
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-code-branch"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get in Touch
+                    </a>
+                </div>
+
+                <div class="tech-pill-row">
+                    <span class="tech-pill"><i class="fab fa-microsoft"></i> C# / .NET 9</span>
+                    <span class="tech-pill"><i class="fas fa-cubes"></i> Microservices</span>
+                    <span class="tech-pill"><i class="fas fa-cloud"></i> Azure Service Bus</span>
+                    <span class="tech-pill"><i class="fas fa-network-wired"></i> Event-Driven / Outbox</span>
+                    <span class="tech-pill"><i class="fas fa-sitemap"></i> Domain-Driven Design</span>
+                    <span class="tech-pill"><i class="fas fa-database"></i> SQL Server &amp; Redis</span>
+                    <span class="tech-pill"><i class="fas fa-robot"></i> AI Augmented / Copilot</span>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">8+</div>
+                        <div class="metric-label">Years of Back-End Engineering</div>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Nik Group – Back-End Developer</h3>
-                        <div class="date">May 2020 – Jun 2022</div>
-                        <ul>
-                            <li>Built a microservice in .NET Core to collect health data from 3,000+ security devices deployed in jewelry stores.</li>
-                            <li>Implemented real-time monitoring and failure alerts to detect issues early and enhance operational safety.</li>
-                            <li>Added a Redis caching layer to reduce database load by 30% and cut average response times from 500ms to 200ms.</li>
-                            <li>Participated in architecture and requirements planning to support scalable, high-performance system design.</li>
-                        </ul>
+                    <div class="metric-card">
+                        <div class="metric-value">DDD &amp; CQRS</div>
+                        <div class="metric-label">Distributed Systems &amp; Clean Architecture</div>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Acctech – Back-End Developer</h3>
-                        <div class="date">Feb 2018 – Apr 2020</div>
-                        <ul>
-                            <li>Introduced a modular Web API platform from scratch, reducing feature development time by 30% through reusable service components.</li>
-                            <li>Built resilient API integrations for automated data ingestion, halving parsing time and streamlining data workflows.</li>
-                            <li>Worked closely with solution architects to design scalable web applications, aligning system architecture with functional and performance goals.</li>
-                            <li>Refactored legacy code and optimized database interactions, improving system responsiveness and enhancing user experience by 15%.</li>
-                        </ul>
+                    <div class="metric-card">
+                        <div class="metric-value">SetSharp</div>
+                        <div class="metric-label">Open-Source .NET Source Generator on NuGet</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Azad University, Esfahan</strong><br>
-            B.Sc. Information Technology</p>
-        </section>
-
-        <section class="section">
-            <h2>Languages</h2>
-            <ul>
-                <li><strong>English:</strong> Fluent</li>
-                <li><strong>Persian:</strong> Native</li>
-            </ul>
-        </section>
-
-        <!-- New Projects Section -->
-        <section class="section">
-            <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Financial Compliance System</h3>
-                    <p>Developed a comprehensive financial compliance system supporting 1,500+ clients with audit trails and role-based access control.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">.NET Core</span>
-                        <span class="tech-tag">Azure AD B2C</span>
-                        <span class="tech-tag">Azure Service Bus</span>
-                    </div>
+        <!-- Technical Skills Section -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technical Expertise</span>
+                    <h2 class="section-title">Skills &amp; Technology Stack</h2>
                 </div>
 
-                <div class="project-card">
-                    <h3>Security Device Monitoring System</h3>
-                    <p>Built a microservice architecture for real-time monitoring of 3,000+ security devices with failure alerts and performance optimization.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">.NET Core</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">Microservices</span>
-                        <span class="tech-tag">Real-time Monitoring</span>
+                <div class="skills-grid">
+                    <!-- 1. Languages & DBs -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h3 class="skill-card-title">Languages &amp; Databases</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C# (.NET 8 / 9)</span>
+                            <span class="skill-tag">T-SQL</span>
+                            <span class="skill-tag">MS SQL Server</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">NoSQL</span>
+                            <span class="skill-tag">Indexing &amp; Query Tuning</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <h3>Modular Web API Platform</h3>
-                    <p>Created a scalable Web API platform with reusable components, reducing development time by 30%.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">ASP.NET</span>
-                        <span class="tech-tag">REST API</span>
-                        <span class="tech-tag">DDD</span>
-                        <span class="tech-tag">SOLID</span>
+                    <!-- 2. Frameworks & Core -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                            <h3 class="skill-card-title">Frameworks &amp; Core</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">.NET Core</span>
+                            <span class="skill-tag">EF Core</span>
+                            <span class="skill-tag">gRPC</span>
+                            <span class="skill-tag">ABP Framework</span>
+                            <span class="skill-tag">RESTful APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Design & Architecture -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <h3 class="skill-card-title">Design &amp; Architecture</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">Domain-Driven Design (DDD)</span>
+                            <span class="skill-tag">CQRS</span>
+                            <span class="skill-tag">Event-Driven Architecture</span>
+                            <span class="skill-tag">Outbox &amp; Inbox Patterns</span>
+                            <span class="skill-tag">SOLID Principles</span>
+                            <span class="skill-tag">Design Patterns</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Cloud & DevOps -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                            <h3 class="skill-card-title">Cloud &amp; DevOps</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Azure Service Bus</span>
+                            <span class="skill-tag">Azure Blob Storage</span>
+                            <span class="skill-tag">Azure AD B2C</span>
+                            <span class="skill-tag">Application Insights</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Azure DevOps</span>
+                            <span class="skill-tag">CI/CD Pipelines</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Tools & AI -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                            <h3 class="skill-card-title">Tools, Metaprogramming &amp; AI</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Roslyn Source Generators</span>
+                            <span class="skill-tag">NuGet Package Publishing</span>
+                            <span class="skill-tag">Google Antigravity</span>
+                            <span class="skill-tag">Cursor (AI IDE)</span>
+                            <span class="skill-tag">GitHub Copilot</span>
+                            <span class="skill-tag">Semantic Kernel (AI)</span>
+                            <span class="skill-tag">Visual Studio</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. Testing & Methodologies -->
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-icon"><i class="fas fa-vial-circle-check"></i></div>
+                            <h3 class="skill-card-title">Testing &amp; Methodologies</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TDD (Test-Driven)</span>
+                            <span class="skill-tag">BDD (Behavior-Driven)</span>
+                            <span class="skill-tag">Unit &amp; Integration Testing</span>
+                            <span class="skill-tag">Technical Documentation</span>
+                            <span class="skill-tag">Agile / Scrum</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
 
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Career History</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Rayankar -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Back-End Engineer</h3>
+                                    <div class="company-name">Rayankar</div>
+                                </div>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> May 2025 – Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Developing scalable backend services for an enterprise pharmacy medication management platform, powering critical pharmacy operations, inventory, and financial transaction workflows.</li>
+                                <li>Collaborating closely with QA, frontend, and product teams to analyze business requirements, troubleshoot production incidents, and deliver high-reliability features.</li>
+                                <li>Participating actively in architectural decision-making, technical design discussions, and code reviews to improve system maintainability and resilience.</li>
+                                <li>Leveraged AI-assisted engineering workflows (Google Antigravity, Cursor) to accelerate feature scaffolding, refactoring, and comprehensive test suite generation.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fintranet -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Back-End Engineer</h3>
+                                    <div class="company-name">Fintranet (Persici Financial Technologies)</div>
+                                </div>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2022 – Apr 2025</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Engineered a compliance-focused financial product for over 1,500 clients, featuring role-based access control (RBAC) and detailed audit trails.</li>
+                                <li>Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.</li>
+                                <li>Boosted database speed by 20% by analyzing SQL execution plans and implementing targeted non-clustered indexes on high-traffic tables.</li>
+                                <li>Implemented automatic Unit of Work handling via interceptors, eliminating 90% of manual transaction boilerplate and reducing development overhead.</li>
+                                <li>Designed a messaging abstraction layer over Azure Service Bus supporting Request-Reply and Session-based messaging patterns, reducing integration effort by ~30% and decoupling 5+ microservices.</li>
+                                <li>Engineered a multi-tenant authentication system with Azure AD B2C to provide centralized and secure user access management.</li>
+                                <li>Mentored junior developers in C# and Azure best practices, leading to a 25% decrease in production code defects.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Nik Group -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Back-End Engineer</h3>
+                                    <div class="company-name">Nik Group</div>
+                                </div>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> May 2020 – Jun 2022</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Architected a .NET Core microservice to collect and monitor real-time health telemetry from 3,000+ commercial security devices deployed across retail jewelry stores, implementing automated failure alerts that enhanced operational safety.</li>
+                                <li>Slashed average response times by 60% (from 500ms to 200ms) by implementing a Redis caching layer that also cut database load by 30%.</li>
+                                <li>Refactored legacy codebases and optimized database interactions, improving system responsiveness and enhancing user experience by 30%.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Acctech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Back-End Developer</h3>
+                                    <div class="company-name">Acctech</div>
+                                </div>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> Feb 2018 – Apr 2020</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Introduced a modular Web API platform from scratch (including form builder and task scheduling modules), reducing feature development time by 30% through reusable service components.</li>
+                                <li>Cut data parsing time by 50% by implementing fault-tolerant API integrations, enhancing performance and ensuring reliable automated data ingestion.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source & Projects Section -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Open Source &amp; Architecture</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- SetSharp -->
+                    <div class="project-card">
+                        <div>
+                            <span class="project-badge-top"><i class="fas fa-star"></i> Flagship Open Source</span>
+                            <h3>SetSharp</h3>
+                            <p>
+                                An open-source compile-time C# Source Generator that automatically maps <code>appsettings.json</code> into strongly-typed C# POCOs and auto-generates Dependency Injection extensions (<code>IOptions</code> pattern) with MSBuild integration and zero runtime reflection overhead.
+                            </p>
+                            <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                                <span class="skill-tag">C# Source Generator</span>
+                                <span class="skill-tag">Roslyn Compiler</span>
+                                <span class="skill-tag">NuGet Package</span>
+                                <span class="skill-tag">Zero Reflection</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.nuget.org/packages/SetSharp" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-box-open"></i> NuGet Package <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://github.com/beheshty/SetSharp" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> GitHub <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Distributed Microservices (Quiz Engine) -->
+                    <div class="project-card">
+                        <div>
+                            <span class="project-badge-top"><i class="fas fa-cubes"></i> Distributed Architecture</span>
+                            <h3>Quiz Engine Microservices</h3>
+                            <p>
+                                A deep dive into resilient distributed systems using .NET, Clean Architecture, and Domain-Driven Design (DDD). Features gRPC inter-service communication, CQRS, RabbitMQ messaging, and transactional Outbox patterns in a fully Dockerized multi-service environment.
+                            </p>
+                            <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                                <span class="skill-tag">.NET Core</span>
+                                <span class="skill-tag">gRPC</span>
+                                <span class="skill-tag">RabbitMQ</span>
+                                <span class="skill-tag">Clean Architecture</span>
+                                <span class="skill-tag">Docker</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/beheshty/quiz-engine-microservices" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Vectaurant -->
+                    <div class="project-card">
+                        <div>
+                            <span class="project-badge-top"><i class="fas fa-robot"></i> AI &amp; Vector Search (RAG)</span>
+                            <h3>Vectaurant</h3>
+                            <p>
+                                An intelligent AI restaurant agent demonstrating the Retrieval-Augmented Generation (RAG) pattern. Leverages Microsoft Semantic Kernel for conversational agent orchestration and Qdrant Vector Database for semantic memory and vector search retrieval.
+                            </p>
+                            <div class="skill-tags" style="margin-bottom: 1.5rem;">
+                                <span class="skill-tag">.NET</span>
+                                <span class="skill-tag">Semantic Kernel</span>
+                                <span class="skill-tag">Qdrant Vector DB</span>
+                                <span class="skill-tag">RAG Pattern</span>
+                                <span class="skill-tag">AI Agent</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/beheshty/Vectaurant" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Writing & Publications -->
+        <section class="section" id="writing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Thought Leadership</span>
+                    <h2 class="section-title">Articles &amp; Deep Dives</h2>
+                </div>
+
+                <div class="articles-grid" style="grid-template-columns: 1fr; max-width: 860px; margin: 0 auto;">
+                    <a href="https://medium.com/@amirbeh71/stop-writing-pocos-for-appsettings-json-use-setsharp-instead-77f50168b743" target="_blank" rel="noopener noreferrer" class="article-card" style="padding: 2.25rem;">
+                        <div>
+                            <div class="article-meta" style="color: var(--accent-primary); font-weight: 600;">
+                                <i class="fab fa-medium"></i> Medium &bull; Published Technical Deep-Dive
+                            </div>
+                            <h3 style="font-size: 1.45rem; margin-bottom: 1rem;">Stop Writing POCOs for appsettings.json — Use SetSharp Instead</h3>
+                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                                Tired of manually creating and updating configuration classes every time your <code>appsettings.json</code> changes? This article introduces <strong>SetSharp</strong>, explaining how compile-time Roslyn Source Generators automate POCO creation and Dependency Injection registration (<code>IOptions</code> pattern) with zero reflection overhead.
+                            </p>
+                        </div>
+                        <span class="project-link" style="font-size: 1rem;">Read Full Article on Medium <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="section" id="recommendations">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Endorsements</span>
+                    <h2 class="section-title">What Colleagues Say</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "Amirhossein demonstrated strong technical skills and a deep understanding of scalable and secure back-end development. He worked extensively with .NET Core, C#, and Azure Services, building reliable APIs and contributing to the overall performance, security, and scalability of our platform. He consistently delivered clean, maintainable code and was committed to improving technical infrastructure."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AR</div>
+                            <div class="author-info">
+                                <h4>Ashley Robertson</h4>
+                                <p>CEO &bull; Persici Financial Technologies (Fintranet)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "What truly stands out about Amirhossein is his obsession with code quality. He approaches every task with a meticulous attention to detail, ensuring that the solutions he delivers are clean, efficient, and aligned with best practices. His proactive approach to addressing potential issues before they arise has been a significant asset to our backend development team."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Shakib</h4>
+                                <p>Team Leader &bull; Fintranet</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "I had the pleasure of working closely with Amir Hossein, who is a precise and highly organized professional. His attention to detail and systematic approach consistently added significant value to our projects. Amir Hossein’s disciplined style ensures reliability, making him an asset to any technical team."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">NH</div>
+                            <div class="author-info">
+                                <h4>Nasim Hoseinzadeh</h4>
+                                <p>Scrum Master &bull; Fintranet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & Contact Section -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="contact-cta">
+                <h2>Let's Build Something Robust</h2>
+                <p>
+                    I'm always open to discussing backend system architectures, cloud-native scalability, open-source projects, and new remote or relocation opportunities.
+                </p>
+
+                <div class="contact-methods">
+                    <button class="copy-btn" onclick="copyText('amirbeh71@gmail.com', 'Email copied to clipboard!')">
+                        <i class="fas fa-envelope"></i> amirbeh71@gmail.com
+                    </button>
+                    <button class="copy-btn" onclick="copyText('+989133172047', 'Phone copied to clipboard!')">
+                        <i class="fas fa-phone"></i> +98 913 317 20 47
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/amirhosein-beheshty/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/beheshty" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.nuget.org/packages/SetSharp" target="_blank" rel="noopener noreferrer" class="social-link" title="NuGet">
+                        <i class="fas fa-box-open"></i>
+                    </a>
+                    <a href="assets/Amirhossein-Beheshti_Back-End-Engineer.pdf" class="social-link" download title="Download Resume PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="copyright">
+                &copy; 2026 Amirhossein Beheshti. Engineered with clean standards &amp; passion for reliable backends.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Element -->
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <!-- Scripts -->
     <script>
-        function toggleTheme() {
-            const body = document.body;
-            const theme = body.getAttribute('data-theme');
-            const themeToggle = document.querySelector('.theme-toggle i');
-            
-            if (theme === 'dark') {
-                body.removeAttribute('data-theme');
-                themeToggle.classList.remove('fa-sun');
-                themeToggle.classList.add('fa-moon');
+        // Theme toggler with localStorage persistence
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        function updateThemeIcon(theme) {
+            if (theme === 'light') {
+                themeIcon.className = 'fas fa-sun';
             } else {
-                body.setAttribute('data-theme', 'dark');
-                themeToggle.classList.remove('fa-moon');
-                themeToggle.classList.add('fa-sun');
+                themeIcon.className = 'fas fa-moon';
             }
         }
 
-        // Add intersection observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, {
-            threshold: 0.1
+        // Initialize icon state based on current html attribute
+        updateThemeIcon(document.documentElement.getAttribute('data-theme'));
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+            updateThemeIcon(targetTheme);
         });
 
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(section);
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
         });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+            });
+        });
+
+        // Copy to clipboard utility with toast
+        function copyText(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(message);
+            }).catch(() => {
+                showToast('Copied: ' + text);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
     </script>
 </body>
 </html>
