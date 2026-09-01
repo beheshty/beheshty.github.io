@@ -1068,19 +1068,15 @@
                 <div class="metrics-grid">
                     <div class="metric-card">
                         <div class="metric-value">8+</div>
-                        <div class="metric-label">Years of Engineering Experience</div>
+                        <div class="metric-label">Years of Back-End Engineering</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">1,500+</div>
-                        <div class="metric-label">Clients on Compliance Platform</div>
+                        <div class="metric-value">DDD &amp; CQRS</div>
+                        <div class="metric-label">Distributed Systems &amp; Clean Architecture</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-value">3,000+</div>
-                        <div class="metric-label">Real-Time IoT Security Devices</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-value">v3.0</div>
-                        <div class="metric-label">SetSharp NuGet Package Releases</div>
+                        <div class="metric-value">SetSharp</div>
+                        <div class="metric-label">Open-Source .NET Source Generator on NuGet</div>
                     </div>
                 </div>
             </div>
@@ -1330,46 +1326,47 @@ builder.Services.AddAllGeneratedOptions();
                         </div>
                     </div>
 
-                    <!-- Distributed Microservices -->
+                    <!-- Distributed Microservices (Quiz Engine) -->
                     <div class="project-card">
                         <div>
-                            <span class="project-badge-top"><i class="fas fa-cubes"></i> Reference Architecture</span>
-                            <h3>Distributed Microservices Architecture</h3>
+                            <span class="project-badge-top"><i class="fas fa-cubes"></i> Distributed Architecture</span>
+                            <h3>Quiz Engine Microservices</h3>
                             <p>
-                                A polyglot reference microservices architecture built on .NET Core, demonstrating reliable Event-Driven Design, gRPC inter-service communication, Redis distributed caching, and transactional Outbox/Inbox patterns for message reliability.
+                                A deep dive into resilient distributed systems using .NET, Clean Architecture, and Domain-Driven Design (DDD). Features gRPC inter-service communication, CQRS, RabbitMQ messaging, and transactional Outbox patterns in a fully Dockerized multi-service environment.
                             </p>
                             <div class="skill-tags" style="margin-bottom: 1.5rem;">
                                 <span class="skill-tag">.NET Core</span>
                                 <span class="skill-tag">gRPC</span>
-                                <span class="skill-tag">Event-Driven</span>
-                                <span class="skill-tag">Outbox Pattern</span>
-                                <span class="skill-tag">Redis</span>
+                                <span class="skill-tag">RabbitMQ</span>
+                                <span class="skill-tag">Clean Architecture</span>
+                                <span class="skill-tag">Docker</span>
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/beheshty" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <a href="https://github.com/beheshty/quiz-engine-microservices" target="_blank" rel="noopener noreferrer" class="project-link">
                                 <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Interview Algorithm Lab -->
+                    <!-- Vectaurant -->
                     <div class="project-card">
                         <div>
-                            <span class="project-badge-top"><i class="fas fa-flask"></i> Interactive Lab</span>
-                            <h3>Interview Algorithm Lab</h3>
+                            <span class="project-badge-top"><i class="fas fa-robot"></i> AI &amp; Vector Search (RAG)</span>
+                            <h3>Vectaurant</h3>
                             <p>
-                                A collection of classic computer science algorithms and data structures implemented in C# with clean code, detailed mathematical complexity explanations, and an interactive step-by-step console visualization runner.
+                                An intelligent AI restaurant agent demonstrating the Retrieval-Augmented Generation (RAG) pattern. Leverages Microsoft Semantic Kernel for conversational agent orchestration and Qdrant Vector Database for semantic memory and vector search retrieval.
                             </p>
                             <div class="skill-tags" style="margin-bottom: 1.5rem;">
-                                <span class="skill-tag">Algorithms</span>
-                                <span class="skill-tag">Data Structures</span>
-                                <span class="skill-tag">C# Console</span>
-                                <span class="skill-tag">Complexity Analysis</span>
+                                <span class="skill-tag">.NET</span>
+                                <span class="skill-tag">Semantic Kernel</span>
+                                <span class="skill-tag">Qdrant Vector DB</span>
+                                <span class="skill-tag">RAG Pattern</span>
+                                <span class="skill-tag">AI Agent</span>
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/beheshty" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <a href="https://github.com/beheshty/Vectaurant" target="_blank" rel="noopener noreferrer" class="project-link">
                                 <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -1386,44 +1383,18 @@ builder.Services.AddAllGeneratedOptions();
                     <h2 class="section-title">Articles &amp; Deep Dives</h2>
                 </div>
 
-                <div class="articles-grid">
-                    <a href="https://www.linkedin.com/in/amirhosein-beheshty/" target="_blank" rel="noopener noreferrer" class="article-card">
+                <div class="articles-grid" style="grid-template-columns: 1fr; max-width: 860px; margin: 0 auto;">
+                    <a href="https://medium.com/@amirbeh71/stop-writing-pocos-for-appsettings-json-use-setsharp-instead-77f50168b743" target="_blank" rel="noopener noreferrer" class="article-card" style="padding: 2.25rem;">
                         <div>
-                            <div class="article-meta">
-                                <i class="fab fa-medium"></i> Medium / LinkedIn &bull; Architecture
+                            <div class="article-meta" style="color: var(--accent-primary); font-weight: 600;">
+                                <i class="fab fa-medium"></i> Medium &bull; Published Technical Deep-Dive
                             </div>
-                            <h3>The Most Powerful Language in Software: The Ubiquitous Language in DDD</h3>
-                            <p>
-                                Exploring Domain-Driven Design (DDD) principles and how aligning code models directly with the business domain eliminates ambiguity and bridges technical and product teams.
+                            <h3 style="font-size: 1.45rem; margin-bottom: 1rem;">Stop Writing POCOs for appsettings.json — Use SetSharp Instead</h3>
+                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                                Tired of manually creating and updating configuration classes every time your <code>appsettings.json</code> changes? This article introduces <strong>SetSharp</strong>, explaining how compile-time Roslyn Source Generators automate POCO creation and Dependency Injection registration (<code>IOptions</code> pattern) with zero reflection overhead.
                             </p>
                         </div>
-                        <span class="project-link">Read Article <i class="fas fa-arrow-right"></i></span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/amirhosein-beheshty/" target="_blank" rel="noopener noreferrer" class="article-card">
-                        <div>
-                            <div class="article-meta">
-                                <i class="fab fa-medium"></i> Medium / LinkedIn &bull; .NET &amp; C#
-                            </div>
-                            <h3>Unlocking C# Superpowers: High-Performance Source Generators</h3>
-                            <p>
-                                How compile-time Roslyn Source Generators eliminate reflection and boilerplate while providing build-time safety and zero runtime performance overhead.
-                            </p>
-                        </div>
-                        <span class="project-link">Read Article <i class="fas fa-arrow-right"></i></span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/amirhosein-beheshty/" target="_blank" rel="noopener noreferrer" class="article-card">
-                        <div>
-                            <div class="article-meta">
-                                <i class="fab fa-medium"></i> Medium / LinkedIn &bull; Systems Design
-                            </div>
-                            <h3>Ambient Transactions &amp; Distributed Consistency in .NET</h3>
-                            <p>
-                                Deep-dive into TransactionScope, Lightweight Transaction Manager (LTM), MSDTC, and implementing custom transaction-aware resources across databases and message queues.
-                            </p>
-                        </div>
-                        <span class="project-link">Read Article <i class="fas fa-arrow-right"></i></span>
+                        <span class="project-link" style="font-size: 1rem;">Read Full Article on Medium <i class="fas fa-arrow-right"></i></span>
                     </a>
                 </div>
             </div>
@@ -1447,7 +1418,7 @@ builder.Services.AddAllGeneratedOptions();
                             <div class="author-avatar">AR</div>
                             <div class="author-info">
                                 <h4>Ashley Robertson</h4>
-                                <p>CEO, Persici Financial Technologies &bull; Fintranet</p>
+                                <p>CEO &bull; Persici Financial Technologies (Fintranet)</p>
                             </div>
                         </div>
                     </div>
@@ -1458,10 +1429,10 @@ builder.Services.AddAllGeneratedOptions();
                             "What truly stands out about Amirhossein is his obsession with code quality. He approaches every task with a meticulous attention to detail, ensuring that the solutions he delivers are clean, efficient, and aligned with best practices. His proactive approach to addressing potential issues before they arise has been a significant asset to our backend development team."
                         </p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><i class="fas fa-user-check"></i></div>
+                            <div class="author-avatar">S</div>
                             <div class="author-info">
-                                <h4>Backend Team Colleague</h4>
-                                <p>Peer Recommendation &bull; LinkedIn</p>
+                                <h4>Shakib</h4>
+                                <p>Team Leader &bull; Fintranet</p>
                             </div>
                         </div>
                     </div>
@@ -1475,7 +1446,7 @@ builder.Services.AddAllGeneratedOptions();
                             <div class="author-avatar">NH</div>
                             <div class="author-info">
                                 <h4>Nasim Hoseinzadeh</h4>
-                                <p>Technical Colleague &bull; LinkedIn</p>
+                                <p>Scrum Master &bull; Fintranet</p>
                             </div>
                         </div>
                     </div>

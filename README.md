@@ -18,7 +18,7 @@ Back-End Engineer with **8+ years of experience** engineering high-performance, 
 - **Frameworks & Core:** ASP.NET Core, .NET Core, EF Core, gRPC, ABP Framework, RESTful APIs
 - **Design & Architecture:** Microservices, Domain-Driven Design (DDD), CQRS, Event-Driven Architecture, Outbox & Inbox Patterns, SOLID, Design Patterns
 - **DevOps & Cloud:** Azure (Service Bus, Blob Storage, Azure AD B2C, Application Insights), Docker, Azure DevOps, CI/CD, Git
-- **Tools, Metaprogramming & AI:** Roslyn Source Generators, NuGet Package Publishing, Google Antigravity, Cursor (AI IDE), GitHub Copilot, Visual Studio
+- **Tools, Metaprogramming & AI:** Roslyn Source Generators, NuGet Package Publishing, Google Antigravity, Cursor (AI IDE), GitHub Copilot, Semantic Kernel, Visual Studio
 - **Testing & Methodologies:** TDD, BDD, Unit & Integration Testing, Technical Documentation, Agile (Scrum)
 
 ---
@@ -61,11 +61,25 @@ Back-End Engineer with **8+ years of experience** engineering high-performance, 
 
 ---
 
-## 🌟 Open Source & Featured Projects
+## 🌟 Featured Open Source & Projects
 
 - **[SetSharp (NuGet)](https://www.nuget.org/packages/SetSharp) | [GitHub](https://github.com/beheshty/SetSharp)**: Compile-time C# Source Generator that automatically maps `appsettings.json` configuration files into strongly-typed C# POCOs and auto-generates Dependency Injection extensions (`IOptions` pattern) with zero reflection overhead.
-- **[Distributed Microservices](https://github.com/beheshty)**: Event-Driven microservices architecture demonstrating gRPC inter-service communication, Redis distributed caching, and transactional Outbox/Inbox patterns.
-- **[Interview Algorithm Lab](https://github.com/beheshty)**: Algorithm implementations in C# with step-by-step console visualization and complexity analysis.
+- **[Quiz Engine Microservices (GitHub)](https://github.com/beheshty/quiz-engine-microservices)**: A deep dive into resilient distributed systems using .NET, Clean Architecture, and Domain-Driven Design (DDD). Features gRPC, CQRS, RabbitMQ messaging, and Outbox patterns in a Dockerized multi-service environment.
+- **[Vectaurant (GitHub)](https://github.com/beheshty/Vectaurant)**: An intelligent AI restaurant agent demonstrating the Retrieval-Augmented Generation (RAG) pattern using Microsoft Semantic Kernel for agent orchestration and Qdrant Vector Database for semantic memory.
+
+---
+
+## 📝 Technical Writing & Publications
+
+- **Medium**: [Stop Writing POCOs for appsettings.json — Use SetSharp Instead](https://medium.com/@amirbeh71/stop-writing-pocos-for-appsettings-json-use-setsharp-instead-77f50168b743)
+
+---
+
+## 🤝 Endorsements & Recommendations
+
+- **Ashley Robertson** (CEO • Persici Financial Technologies / Fintranet)
+- **Shakib** (Team Leader • Fintranet)
+- **Nasim Hoseinzadeh** (Scrum Master • Fintranet)
 
 ---
 
