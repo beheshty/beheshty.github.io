@@ -1,19 +1,14 @@
 {
-    "name": "Amirhossein Beheshti - Back-End Developer",
-    "short_name": "AB Dev",
+    "name": "Amirhossein Beheshti - Senior Back-End Engineer",
+    "short_name": "AB.dev",
     "icons": [
         {
-            "src": "android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
         }
     ],
-    "theme_color": "#2c3e50",
-    "background_color": "#f8f9fa",
+    "theme_color": "#090d16",
+    "background_color": "#090d16",
     "display": "standalone"
-} 
+}

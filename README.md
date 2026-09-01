@@ -1,71 +1,75 @@
 # Amirhossein Beheshti
 
-**Back-End Developer**  
-📞 +98 913 317 20 47 | ✉️ amirbeh71@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/amirhosein-beheshty/) | 🔗 [GitHub](https://github.com/beheshty)
+**Senior Back-End Engineer | .NET & Distributed Systems**  
+📞 +98 913 317 20 47 | ✉️ [amirbeh71@gmail.com](mailto:amirbeh71@gmail.com)  
+🌐 [beheshty.dev](https://beheshty.dev) | 🔗 [LinkedIn](https://www.linkedin.com/in/amirhosein-beheshty/) | 🔗 [GitHub](https://github.com/beheshty) | 📦 [NuGet (SetSharp)](https://www.nuget.org/packages/SetSharp)
 
 ---
 
 ## 🧠 Summary
 
-As a seasoned Back-End Developer with over seven years of dedicated experience, I've had the pleasure of crafting robust and scalable web applications using C#, ASP.NET, and .NET Core. I'm a firm believer in building software that lasts, which is why I'm passionate about applying SOLID principles and Domain-Driven Design. I also enjoy architecting and developing microservices to create systems that are not only high-performing but also a breeze to maintain. My experience extends to fine-tuning backend performance for optimal speed and seamlessly integrating various third-party APIs. I truly thrive in collaborative environments, working closely with cross-functional teams to successfully deliver reliable and impactful software solutions.
+Back-End Engineer with **8+ years of experience** engineering high-performance, distributed web systems using **C#, ASP.NET Core, and modern .NET**. Skilled in **Domain-Driven Design (DDD), clean architecture, event-driven messaging**, and performance optimization across mission-critical financial and healthcare platforms. Creator of the open-source **SetSharp** compile-time .NET Source Generator and passionate about maintainable code, CI/CD automation, and technical mentoring.
 
 ---
 
-## 🛠 Skills
+## 🛠 Technical Skills
 
-**Programming Languages:** C#, T-SQL  
-**Frameworks:** ASP.NET, .NET Core, EF Core, gRPC, ABP  
-**Design & Architecture:** Microservices, DDD, CQRS, Design Patterns, SOLID  
-**DevOps & Cloud:** Docker, Azure DevOps, Azure Service Bus, Azure Blob Storage, Application Insights  
-**Databases:** MS SQL Server, Redis  
-**Testing & Documentation:** TDD, BDD, Unit Testing, Technical Documentation  
-**Version Control & Collaboration:** Git, Agile (Scrum), CI/CD  
-**Tools:** Visual Studio, Cursor (AI IDE), GitHub Copilot
+- **Languages & Databases:** C# (.NET 8/9), T-SQL, MS SQL Server, Redis, NoSQL, Indexing & Query Tuning
+- **Frameworks & Core:** ASP.NET Core, .NET Core, EF Core, gRPC, ABP Framework, RESTful APIs
+- **Design & Architecture:** Microservices, Domain-Driven Design (DDD), CQRS, Event-Driven Architecture, Outbox & Inbox Patterns, SOLID, Design Patterns
+- **DevOps & Cloud:** Azure (Service Bus, Blob Storage, Azure AD B2C, Application Insights), Docker, Azure DevOps, CI/CD, Git
+- **Tools, Metaprogramming & AI:** Roslyn Source Generators, NuGet Package Publishing, Google Antigravity, Cursor (AI IDE), GitHub Copilot, Visual Studio
+- **Testing & Methodologies:** TDD, BDD, Unit & Integration Testing, Technical Documentation, Agile (Scrum)
 
 ---
 
-## 💼 Experience
+## 💼 Professional Experience
 
-### **Fintranet – Back-End Developer**  
-*Jul 2022 – Present*  
-- Developed a compliance-focused financial product used by 1,500+ clients, supporting audit trails and role-based access control.  
+### **Rayankar – Back-End Engineer**  
+*May 2025 – Present*  
+- Developing scalable backend services for an enterprise pharmacy medication management platform, powering critical pharmacy operations, inventory, and financial transaction workflows.  
+- Collaborating closely with QA, frontend, and product teams to analyze business requirements, troubleshoot production incidents, and deliver high-reliability features.  
+- Participating actively in architectural decision-making, technical design discussions, and code reviews to improve system maintainability and resilience.  
+- Leveraged AI-assisted engineering workflows (Google Antigravity, Cursor) to accelerate feature scaffolding, refactoring, and comprehensive test suite generation.
+
+---
+
+### **Fintranet (Persici Financial Technologies) – Back-End Engineer**  
+*Jul 2022 – Apr 2025*  
+- Engineered a compliance-focused financial product for over 1,500 clients, featuring role-based access control (RBAC) and detailed audit trails.  
 - Integrated multiple third-party APIs, improving compliance workflow efficiency by 30%.  
-- Optimized SQL performance via indexing and query tuning, resulting in a 20% improvement in database speed.  
-- Developed a messaging abstraction over Azure Service Bus to support Request, Session, and basic messaging patterns without exposing infrastructure details to developers.
+- Boosted database speed by 20% by analyzing SQL execution plans and implementing targeted non-clustered indexes on high-traffic tables.  
 - Implemented automatic Unit of Work handling via interceptors, eliminating 90% of manual transaction boilerplate and reducing development overhead.  
-- Set up authentication using Azure AD B2C, enabling multi-tenant user access and centralized identity management.
-- Mentored junior developers by conducting code reviews and sharing best practices in C# and Azure, resulting in a 25% reduction in code-related issues during production deployments.
-- Collaborated with product, QA, and frontend teams to deliver scalable features, reducing production incidents and increasing overall system reliability.
+- Designed a messaging abstraction layer over Azure Service Bus supporting Request-Reply and Session-based messaging patterns, reducing integration effort by ~30% and decoupling 5+ microservices.  
+- Engineered a multi-tenant authentication system with Azure AD B2C to provide centralized and secure user access management.  
+- Mentored junior developers in C# and Azure best practices, leading to a 25% decrease in production code defects.
 
 ---
 
-### **Nik Group – Back-End Developer**  
+### **Nik Group – Back-End Engineer**  
 *May 2020 – Jun 2022*  
-- Built a microservice in .NET Core to collect health data from 3,000+ security devices deployed in jewelry stores.  
-- Implemented real-time monitoring and failure alerts to detect issues early and enhance operational safety.  
-- Added a Redis caching layer to reduce database load by 30% and cut average response times from 500ms to 200ms.  
-- Participated in architecture and requirements planning to support scalable, high-performance system design.
+- Architected a .NET Core microservice to collect and monitor real-time health telemetry from 3,000+ commercial security devices deployed across retail jewelry stores, implementing automated failure alerts that enhanced operational safety.  
+- Slashed average response times by 60% (from 500ms to 200ms) by implementing a Redis caching layer that also cut database load by 30%.  
+- Refactored legacy codebases and optimized database interactions, improving system responsiveness and enhancing user experience by 30%.
 
 ---
 
 ### **Acctech – Back-End Developer**  
 *Feb 2018 – Apr 2020*  
-- Introduced a modular Web API platform from scratch, reducing feature development time by 30% through reusable service components.
-- Built resilient API integrations for automated data ingestion, halving parsing time and streamlining data workflows.  
-- Worked closely with solution architects to design scalable web applications, aligning system architecture with functional and performance goals.  
-- Refactored legacy code and optimized database interactions, improving system responsiveness and enhancing user experience by 15%.
+- Introduced a modular Web API platform from scratch (including form builder and task scheduling modules), reducing feature development time by 30% through reusable service components.  
+- Cut data parsing time by 50% by implementing fault-tolerant API integrations, enhancing performance and ensuring reliable automated data ingestion.
 
 ---
 
-## 🎓 Education
+## 🌟 Open Source & Featured Projects
 
-**Azad University, Esfahan**  
-*B.Sc. Information Technology*
+- **[SetSharp (NuGet)](https://www.nuget.org/packages/SetSharp) | [GitHub](https://github.com/beheshty/SetSharp)**: Compile-time C# Source Generator that automatically maps `appsettings.json` configuration files into strongly-typed C# POCOs and auto-generates Dependency Injection extensions (`IOptions` pattern) with zero reflection overhead.
+- **[Distributed Microservices](https://github.com/beheshty)**: Event-Driven microservices architecture demonstrating gRPC inter-service communication, Redis distributed caching, and transactional Outbox/Inbox patterns.
+- **[Interview Algorithm Lab](https://github.com/beheshty)**: Algorithm implementations in C# with step-by-step console visualization and complexity analysis.
 
 ---
 
-## 🌍 Languages
+## 🎓 Education & Languages
 
-- **English:** Fluent  
-- **Persian:** Native
+- **B.Sc. Information Technology** – Azad University, Esfahan
+- **English:** C1 (Full Professional Proficiency) | **Persian:** Native
