@@ -1377,18 +1377,29 @@
                 </div>
 
                 <div class="articles-grid" style="grid-template-columns: 1fr; max-width: 860px; margin: 0 auto;">
-                    <a href="https://medium.com/@amirbeh71/stop-writing-pocos-for-appsettings-json-use-setsharp-instead-77f50168b743" target="_blank" rel="noopener noreferrer" class="article-card" style="padding: 2.25rem;">
+                    <div class="article-card" style="padding: 2.25rem;">
                         <div>
-                            <div class="article-meta" style="color: var(--accent-primary); font-weight: 600;">
-                                <i class="fab fa-medium"></i> Medium &bull; Published Technical Deep-Dive
+                            <div class="article-meta" style="color: var(--accent-primary); font-weight: 600; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                                <span><i class="fab fa-dev"></i> DEV.to</span>
+                                <span>&bull;</span>
+                                <span><i class="fab fa-medium"></i> Medium</span>
+                                <span>&bull;</span>
+                                <span>Published Technical Deep-Dive</span>
                             </div>
-                            <h3 style="font-size: 1.45rem; margin-bottom: 1rem;">Stop Writing POCOs for appsettings.json — Use SetSharp Instead</h3>
-                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.5rem;">
-                                Tired of manually creating and updating configuration classes every time your <code>appsettings.json</code> changes? This article introduces <strong>SetSharp</strong>, explaining how compile-time Roslyn Source Generators automate POCO creation and Dependency Injection registration (<code>IOptions</code> pattern) with zero reflection overhead.
+                            <h3 style="font-size: 1.45rem; margin: 0.75rem 0 1rem; color: var(--text-primary);">Tired of Writing POCOs for appsettings.json? Automate It with a Source Generator</h3>
+                            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 1.75rem;">
+                                Managing configuration classes manually in .NET applications can be tedious, error-prone, and full of boilerplate. This technical article introduces <strong>SetSharp</strong>, explaining how compile-time Roslyn Source Generators automate strongly-typed POCO creation and Dependency Injection registration (<code>IOptions</code> pattern) with build-time safety and zero reflection overhead.
                             </p>
                         </div>
-                        <span class="project-link" style="font-size: 1rem;">Read Full Article on Medium <i class="fas fa-arrow-right"></i></span>
-                    </a>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                            <a href="https://dev.to/amirhossein_beheshti/tired-of-writing-pocos-for-appsettingsjson-automate-it-with-a-source-generator-2fj2" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">
+                                <i class="fab fa-dev"></i> Read on DEV.to <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://medium.com/@amirbeh71/stop-writing-pocos-for-appsettings-json-use-setsharp-instead-77f50168b743" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">
+                                <i class="fab fa-medium"></i> Read on Medium <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1472,6 +1483,12 @@
                     </a>
                     <a href="https://github.com/beheshty" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
                         <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://dev.to/amirhossein_beheshti" target="_blank" rel="noopener noreferrer" class="social-link" title="DEV Community">
+                        <i class="fab fa-dev"></i>
+                    </a>
+                    <a href="https://medium.com/@amirbeh71" target="_blank" rel="noopener noreferrer" class="social-link" title="Medium">
+                        <i class="fab fa-medium-m"></i>
                     </a>
                     <a href="https://www.nuget.org/packages/SetSharp" target="_blank" rel="noopener noreferrer" class="social-link" title="NuGet">
                         <i class="fas fa-box-open"></i>

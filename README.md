@@ -71,6 +71,7 @@ Back-End Engineer with **8+ years of experience** engineering high-performance, 
 
 ## 📝 Technical Writing & Publications
 
+- **DEV.to**: [Tired of Writing POCOs for appsettings.json? Automate It with a Source Generator](https://dev.to/amirhossein_beheshti/tired-of-writing-pocos-for-appsettingsjson-automate-it-with-a-source-generator-2fj2)
 - **Medium**: [Stop Writing POCOs for appsettings.json — Use SetSharp Instead](https://medium.com/@amirbeh71/stop-writing-pocos-for-appsettings-json-use-setsharp-instead-77f50168b743)
 
 ---
